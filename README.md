@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Shopping-Cart
+Este proyecto se basa en la creacion de una pagina web con react Native donde se simule la adquisicion de productos en un carrito de compras
 
-## Getting Started
+# INVESTIGACION APLICADA LIS104 G03T
+![image](https://user-images.githubusercontent.com/79995182/188522186-37932faa-4194-4c29-b288-f1530fa68e41.png)
 
-First, run the development server:
+ ## En este archivo README se pueden encontrar los siguientes elementos:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+ 1) INTEGRANTES DEL EQUIPO:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+     -Carlos Alexander Alvarenga Claros AC211104
+     -Roberto Rodrigo López Alvarado (LA203000)
+     
+ 2) MATERIA:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+     Diseño y Programación de Software Multiplataforma DPS104 G04L
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+ 3) DOCENTE:
 
-## Learn More
+      Ing. Alexander Alberto Siguenza Campos
 
-To learn more about Next.js, take a look at the following resources:
+ 4) FECHA DE ENTREGA:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+      Lunes 27 de julio de 2024
+      
+ LINK DEL VIDEO EXPLICATIVO DEL CODIGO USANDO APIS:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+ PDF DEL TRABAJO
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Comprimido del proyecto en caso exista algun problema con la descarga desde GITHUB
