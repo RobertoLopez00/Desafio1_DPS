@@ -242,3 +242,22 @@ header {
 .hidden {
   display: none;
 }
+
+
+/*Estilos para las imagenes del carrito de compras*/
+/* Estilos para la imagen del producto en el carrito */
+.cart-product {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.product-image {
+  width: 50px; /* Ajusta el tamaño según tus necesidades */
+  height: auto;
+  margin-right: 1rem;
+}
+
+.info-cart-product {
+  flex-grow: 1;
+}
