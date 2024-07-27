@@ -1,29 +1,20 @@
-// ProductModal.jsx
+// ConfirmModal.jsx
 import React from "react";
-import "./ProductModal.css"; // Asegúrate de que la ruta sea correcta
 
-const ProductModal = ({ product, onClose }) => {
-  if (!product) return null;
+const ConfirmModal = ({ show, message, onConfirm, onCancel }) => {
+  if (!show) return null;
 
   return (
     <div className="modal-overlay">
-      <div className="modal-content">
-        <button className="modal-close" onClick={onClose}>
-          X
-        </button>
-        <h2>{product.title}</h2>
-        <img
-          src={product.urlImage}
-          alt={product.title}
-          className="modal-image"
-        />
-        <p className="modal-price">${product.price}</p>
-        <p className="modal-description">
-          {product.description || "No description available"}
-        </p>
+      <div className="modal">
+        <p>{message}</p>
+        <div className="modal-buttons">
+          <button onClick={onConfirm}>Sí</button>
+          <button onClick={onCancel}>No</button>
+        </div>
       </div>
     </div>
   );
 };
 
-export default ProductModal;
+export default ConfirmModal;

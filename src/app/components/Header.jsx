@@ -1,6 +1,5 @@
-// Header.jsx
-import React, { useState } from "react";
-import ProductModal from "./ProductModal"; // O ajusta según la exportación
+import { useState } from "react";
+import ConfirmModal from "./ConfirmModal"; // Asegúrate de ajustar la ruta según tu estructura de archivos
 
 export const Header = ({
   allProducts,
@@ -11,7 +10,23 @@ export const Header = ({
   setTotal,
 }) => {
   const [active, setActive] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
+  const [confirmAction, setConfirmAction] = useState(null);
+
+  const handleDeleteProduct = (product) => {
+    setModalMessage(
+      `¿Está seguro de que desea eliminar ${product.title} del carrito?`
+    );
+    setConfirmAction(() => () => onDeleteProduct(product));
+    setShowModal(true);
+  };
+
+  const handleCleanCart = () => {
+    setModalMessage("¿Está seguro de que desea vaciar el carrito?");
+    setConfirmAction(() => onCleanCart);
+    setShowModal(true);
+  };
 
   const onDeleteProduct = (product) => {
     const results = allProducts.filter((item) => item.id !== product.id);
@@ -24,10 +39,6 @@ export const Header = ({
     setAllProducts([]);
     setTotal(0);
     setCountProducts(0);
-  };
-
-  const handleProductClick = (product) => {
-    setSelectedProduct(product);
   };
 
   return (
@@ -65,13 +76,7 @@ export const Header = ({
                       src="https://static.vecteezy.com/system/resources/previews/018/887/462/original/signs-close-icon-png.png"
                       alt="cerrar"
                       className="icon-close"
-                      onClick={() => onDeleteProduct(product)}
-                    />
-                    <img
-                      src={product.urlImage}
-                      alt={product.title}
-                      className="icon-image"
-                      onClick={() => handleProductClick(product)}
+                      onClick={() => handleDeleteProduct(product)}
                     />
                   </div>
                 ))}
@@ -80,7 +85,7 @@ export const Header = ({
                 <h3>Total:</h3>
                 <span className="total-pagar">${total}</span>
               </div>
-              <button className="btn-clear-all" onClick={onCleanCart}>
+              <button className="btn-clear-all" onClick={handleCleanCart}>
                 Vaciar Carrito
               </button>
             </>
@@ -89,12 +94,15 @@ export const Header = ({
           )}
         </div>
       </div>
-      {selectedProduct && (
-        <ProductModal
-          product={selectedProduct}
-          onClose={() => setSelectedProduct(null)}
-        />
-      )}
+      <ConfirmModal
+        show={showModal}
+        message={modalMessage}
+        onConfirm={() => {
+          setShowModal(false);
+          confirmAction();
+        }}
+        onCancel={() => setShowModal(false)}
+      />
     </header>
   );
 };
