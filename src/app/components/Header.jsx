@@ -1,4 +1,6 @@
-import { useState } from "react";
+// Header.jsx
+import React, { useState } from "react";
+import ProductModal from "./ProductModal"; // O ajusta según la exportación
 
 export const Header = ({
   allProducts,
@@ -9,6 +11,7 @@ export const Header = ({
   setTotal,
 }) => {
   const [active, setActive] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   const onDeleteProduct = (product) => {
     const results = allProducts.filter((item) => item.id !== product.id);
@@ -21,6 +24,10 @@ export const Header = ({
     setAllProducts([]);
     setTotal(0);
     setCountProducts(0);
+  };
+
+  const handleProductClick = (product) => {
+    setSelectedProduct(product);
   };
 
   return (
@@ -60,6 +67,12 @@ export const Header = ({
                       className="icon-close"
                       onClick={() => onDeleteProduct(product)}
                     />
+                    <img
+                      src={product.urlImage}
+                      alt={product.title}
+                      className="icon-image"
+                      onClick={() => handleProductClick(product)}
+                    />
                   </div>
                 ))}
               </div>
@@ -76,6 +89,12 @@ export const Header = ({
           )}
         </div>
       </div>
+      {selectedProduct && (
+        <ProductModal
+          product={selectedProduct}
+          onClose={() => setSelectedProduct(null)}
+        />
+      )}
     </header>
   );
 };
