@@ -2,7 +2,7 @@
 export const data = [
   {
     id: 1,
-    title: "Computadora portátil Lenovo ThinkPad X1 Carbon",
+    title: "Computadora portátil Lenovo ThinkPad X1",
     price: 1200,
     urlImage:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvwDhWuy9mimJWpsMJeHCm-jrkeMR1xtBR5A&s",
@@ -161,7 +161,7 @@ export const data = [
   },
   {
     id: 17,
-    title: "Drone DJI Mavic Air 2",
+    title: "Drone DJI Mavic Air 2 con cámara 4K",
     price: 1000,
     urlImage: "https://cdn.mos.cms.futurecdn.net/hEiMkqvPVki9L9bCQevxi.jpg",
     description:

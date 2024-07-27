@@ -1,4 +1,4 @@
-'use client'; // Asegúrate de que el código se ejecute en el cliente
+'use client'; 
 
 import React, { createContext, useState, useContext } from 'react';
 

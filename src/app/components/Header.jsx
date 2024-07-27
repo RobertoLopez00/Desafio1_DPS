@@ -43,7 +43,7 @@ export const Header = ({
 
   return (
     <header>
-      <h1>Tienda de Libros</h1>
+      <h1>Tienda Online RC STORE</h1>
       <div className="container-icon">
         <div className="container-cart-icon" onClick={() => setActive(!active)}>
           <img

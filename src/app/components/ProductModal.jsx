@@ -1,6 +1,6 @@
 // ProductModal.jsx
 import React from "react";
-import "../ProductModal.css"; // Asegúrate de tener un archivo CSS para el modal
+import "../ProductModal.css"; 
 
 export const ProductModal = ({ product, onClose }) => {
   if (!product) return null;
