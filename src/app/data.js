@@ -8,7 +8,7 @@ export const data = [
   },
   {
     id: 2,
-    title: "El señor de los anillos(Trilogía)",
+    title: "El señor de los anillos",
     price: 190,
     urlImage:
       "https://www.planetadelibros.com/usuaris/libros/fotos/358/original/portada_pack-trilogia-el-senor-de-los-anillos_j-r-r-tolkien_202206071544.jpg",
@@ -16,9 +16,9 @@ export const data = [
   },
   {
     id: 3,
-    title: "Cuentos de Barro",
+    title: "Mouse Gaming",
     price: 30,
-    urlImage: "https://m.media-amazon.com/images/I/41QZEmcDLsL.jpg",
+    urlImage: "https://i.pinimg.com/564x/99/58/f7/9958f7780d6eb2a3b61c2a7145de301b.jpg",
     quantity: 1,
   },
   {

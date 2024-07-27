@@ -1,5 +1,8 @@
-import React from "react";
-import { data } from "../data";
+'use client';
+
+import React from 'react';
+import { data } from '../data'; // Ajusta la ruta si es necesario
+
 export const ProductList = ({
   allProducts,
   setAllProducts,
@@ -13,14 +16,16 @@ export const ProductList = ({
       const products = allProducts.map((item) =>
         item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
       );
-      setTotal(total + product.price * product.quantity);
-      setCountProducts(countProducts + product.quantity);
-      return setAllProducts([...products]);
+      setTotal(total + product.price);
+      setCountProducts(countProducts + 1);
+      setAllProducts(products);
+    } else {
+      setTotal(total + product.price);
+      setCountProducts(countProducts + 1);
+      setAllProducts([...allProducts, { ...product, quantity: 1 }]);
     }
-    setTotal(total + product.price * product.quantity);
-    setCountProducts(countProducts + product.quantity);
-    setAllProducts([...allProducts, product]);
   };
+
   return (
     <div className="container-items">
       {data.map((product) => (
@@ -29,7 +34,7 @@ export const ProductList = ({
             <img src={product.urlImage} alt={product.title} />
           </figure>
           <div className="info-product">
-            <h2>{product.nameProduct}</h2>
+            <h2>{product.title}</h2>
             <p className="price">${product.price}</p>
             <button onClick={() => onAddProduct(product)}>
               Añadir al carrito
