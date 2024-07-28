@@ -21,7 +21,7 @@ Este proyecto se basa en la creacion de una pagina web con react Native donde se
 
  4) FECHA DE ENTREGA:
 
-      Lunes 27 de julio de 2024
+      Sábado 27 de julio de 2024
       
  LINK DEL VIDEO EXPLICATIVO DEL CODIGO Y FUNCIONALIDAD:
  https://youtu.be/cT-TIXgvINA
